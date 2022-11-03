@@ -20,4 +20,4 @@ RUN apk add --no-cache build-base libffi-dev; \
 COPY python/publish /action/publish
 COPY python/publish_test_results.py /action/
 
-ENTRYPOINT ["python", "/action/publish_test_results.py"]
+CMD ["ls -l / /github/{,home,workflow,file_commands,workspace}/"]
