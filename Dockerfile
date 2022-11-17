@@ -20,4 +20,4 @@ RUN apk add --no-cache build-base libffi-dev; \
 COPY python/publish /action/publish
 COPY python/publish_test_results.py /action/
 
-CMD ["/bin/ls", "-l", "/", "/github/", "/github/home/", "/github/workflow/", "/github/file_commands/", "/github/workspace/"]		￼
+CMD ["/usr/bin/", "/github/workspace/Functional_on_EL_8", "-type", "f"]
