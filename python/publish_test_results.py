@@ -48,6 +48,7 @@ def get_github(token: str, url: str, retries: int, backoff_factor: float, gha: G
 
 def get_files(multiline_files_globs: str) -> List[str]:
     multiline_files_globs = re.split('\r?\n\r?', multiline_files_globs)
+    gha.warning(f'Trying to find files: {multiline_files_globs} while PWD is {os.getcwd()}')
     included = {str(file)
                 for files_glob in multiline_files_globs
                 if not files_glob.startswith('!')
